@@ -3,6 +3,7 @@ framework: mocha
 preRun:
      command:
         - npx rust-app rustup-init
+        - source "$HOME/.cargo/env"
         - yarn --frozen-lockfilearn
         - yarn build-native-release
 preMerge:
