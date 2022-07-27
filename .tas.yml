@@ -10,12 +10,12 @@ preMerge:
   env:
       NODE_ENV: test
   pattern: 
-    - "packages/core/core/test/*.test.js"
+    - "packages/*/!(integration-tests|fs-write-stream-atomic)/test/*.js"
 postMerge:
   env:
       NODE_ENV: test
   pattern: 
-    - "packages/core/core/test/*.test.js"
+    - "packages/*/!(integration-tests|fs-write-stream-atomic)/test/*.js"
 postRun:
      command:
         - echo "hello"
